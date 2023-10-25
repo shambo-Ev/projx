@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFrame Test</title>
+    <style>
+        /* Define styles for the container */
+        .iframe-container {
+            width: 800px; /* Set the desired width for the iframe container */
+            height: 600px; /* Set the desired height for the iframe container */
+            overflow: hidden; /* Hide the overflowing content */
+        }
+
+        /* Define styles for the iframe */
+        .iframe-container iframe {
+            width: 113%; /* Use 100% width to fill the container */
+            height: 130%; /* Use 100% height to fill the container */
+            border: none; /* Remove the iframe border if any */
+            margin: -50px -60px 65; /* Adjust the margins to crop content from the bottom and right */
+        }
+    </style>
 </head>
 <body>
     <h1>IFrame Test</h1>
-    <iframe src="http://localhost:3000/proxy" width="800" height="600"></iframe>
+    <div class="iframe-container">
+        <iframe src="http://localhost:3000/proxy"></iframe>
+    </div>
 </body>
 </html>
